@@ -1,0 +1,126 @@
+
+<mat-card class="title">
+  <br>
+  <mat-card-title  aria-level="2" class="titleWord">
+    申請對象 
+    <br>
+    <br>
+    <mat-card-subtitle  aria-level="3" class="subtitle">
+      10人以上90人以下之政府機關團體、學術團體及一般團體，每團以45人為限。如團體人數超過45人，為<br>
+      維護導覽品質，請配合管理所安排拆分為兩組進行活動。
+    </mat-card-subtitle>
+  </mat-card-title>
+  <br>
+  <mat-card-title class="word1">
+     申請時間及方式 
+    <br>
+    <br>
+    <mat-card-subtitle class="subtitle">
+      僅受理【事前電話預約】，依行政院人事行政總處公告機關辦公日週一至週五上午8:30-12:00、下午<br>
+      1:30-5:00期間受理電話預約及洽詢，最遲須於導覽日期7天前預約登記完成。非上述時間預約者，管<br>
+      理所得不受理。
+    </mat-card-subtitle>
+  </mat-card-title>
+</mat-card>
+
+<mat-card class="option1">
+  <mat-card-title>
+    連絡電話
+  </mat-card-title>
+  <mat-form-field  class="example-full-width" appearance="fill">
+    <input  type="tel"  
+    id="inputMobile"
+    [(ngModel)]="register.phone" [formControl]="phoneFormControl" name="phone" placeholder="請輸入連絡電話" 
+     matInput>
+    <mat-error *ngIf="phoneFormControl.hasError('required')">
+      需要輸入電話
+    </mat-error>
+  </mat-form-field>
+</mat-card>
+
+<mat-card class="option1">
+  <mat-card-title>
+    申請人姓名
+  </mat-card-title>
+  <mat-form-field  class="example-full-width" appearance="fill">
+    <input  [formControl]="nameFormControl" [(ngModel)]="register.contacts" placeholder="請輸入申請人姓名" matInput >
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      需要輸入姓名
+    </mat-error>
+  </mat-form-field>
+</mat-card>
+
+<mat-card class="option1">
+  <mat-card-title>
+    電子郵件
+  </mat-card-title>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>電子郵件</mat-label>
+    <input  type="email" [(ngModel)]="register.email" 
+    [formControl]="emailFormControl" 
+    [errorStateMatcher]="matcher"
+      placeholder="Ex. user@example.com" matInput >
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      請輸入正確email格式
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      需要輸入email
+    </mat-error>
+  </mat-form-field>
+</mat-card>
+
+<mat-card class="option1">
+  <mat-card-title>
+    參觀機構
+  </mat-card-title>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input [(ngModel)]="register.organize" placeholder="請輸入參觀機構名稱" matInput >
+  </mat-form-field>
+</mat-card>
+
+<mat-card class="option1">
+  <mat-card-title>
+    參觀人數
+  </mat-card-title>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input [formControl]="visitNumberFormControl" [(ngModel)]="register.visitNumber" placeholder="請輸入參觀人數" matInput >
+    <mat-error *ngIf="visitNumberFormControl.hasError('required')">
+      需要輸入參觀人數
+    </mat-error>
+  </mat-form-field>
+</mat-card>
+
+<mat-card class="date">
+  <mat-card-title>
+    預定參觀日期
+  </mat-card-title>
+  <mat-card class="demo-inline-calendar-card">
+    <mat-calendar  [(selected)]="register.visitTime" ></mat-calendar>
+  </mat-card>
+</mat-card>
+
+<mat-card class="option1">
+  <mat-card-title>
+    備註說明
+  </mat-card-title>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input #toTarget [(ngModel)]="register.remark" placeholder="備註" matInput>
+  </mat-form-field>
+</mat-card>
+
+<mat-card class="button">
+  <section>
+    <div class="example-button-row">
+      <mat-error  *ngIf="phoneFormControl.hasError('required') ||emailFormControl.hasError('required') 
+      ||nameFormControl.hasError('required') ||visitNumberFormControl.hasError('required') ">
+      請輸入完整內容
+      </mat-error>
+      <button mat-raised-button color="accent" class="setBtn" 
+      [disabled]="phoneFormControl.hasError('required') ||emailFormControl.hasError('required') 
+    ||nameFormControl.hasError('required') ||visitNumberFormControl.hasError('required') "
+       onclick="alert('送出成功');" (click)="onClick()">送出 </button>
+    </div>
+  </section>
+</mat-card>
+<app-nav-fab-menu></app-nav-fab-menu>
+<app-nav-back (click)="onGoBack()"></app-nav-back>

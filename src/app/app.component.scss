@@ -1,0 +1,44 @@
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 56px;
+}
+.online {
+  font-size: 0.8em;
+  color: white;
+  border-radius: 0.5em;
+  padding: 0em 0.8em 0em 0.8em;
+  background-color: rgb(47, 136, 246);
+}
+.offline {
+  font-size: 0.8em;
+  color: white;
+  border-radius: 0.5em;
+  padding: 0em 0.8em 0em 0.8em;
+  background-color: red;
+}
+
+.add-home-screen {
+  position: fixed;
+  color: red;
+  font-size: large;
+  font-weight:bold;
+  background-color: yellow;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  height: 40px;
+  border: 0px;
+  z-index: 2;
+}

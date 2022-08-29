@@ -1,0 +1,19 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: green-app
+build:
+  artifacts:
+  - image: package-json-image
+    buildpacks:
+      builder: gcr.io/buildpacks/builder:v1  
+      env: 
+        - API_URI=https://green-api-vq3iuiusna-de.a.run.app
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
+portForward:
+- resourceType: service
+  resourceName: package-json-image
+  port: 8080

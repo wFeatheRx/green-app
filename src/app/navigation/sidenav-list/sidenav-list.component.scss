@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.version {
+  position: fixed !important;
+  bottom: 15px;
+  left: 15px;
+}
+
+.online {
+  position: relative;
+  right:  80px;
+}

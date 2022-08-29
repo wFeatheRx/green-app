@@ -1,0 +1,13 @@
+
+
+mat-toolbar {
+  border-radius: 3px;
+  position: fixed;
+  z-index: 99999;
+}
+
+@media(max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
+}

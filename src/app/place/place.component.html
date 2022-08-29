@@ -1,0 +1,85 @@
+<mat-card [routerLink]="['有雞肥區']">
+  <mat-card-header>
+    <mat-card-title>有雞肥區</mat-card-title>
+    <mat-card-subtitle>利用雞隻的習性來幫助土壤翻土、糞便施肥等來增加土壤的養份與自然的循環，這就是一個簡易的循環農業，將廢棄物轉化為可循環再利用的生產剩餘物質，將可減少農業資源的浪費。
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/chicken.png">
+  </mat-card-content>
+</mat-card>
+<mat-card [routerLink]="['魚菜共生區']">
+  <mat-card-header>
+    <mat-card-title>魚菜共生區</mat-card-title>
+    <mat-card-subtitle>又稱養耕共生、複合式耕養，指的是結合了水生動物中的排泄物與水中的有機質，分解過濾成植物可吸收的無機鹽後供應給飼養箱上的蔬菜，同時蔬菜的根系把系統內的水淨化供給水生動物使用。
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/fish.png">
+  </mat-card-content>
+</mat-card>
+<mat-card [routerLink]="['植物栽培區']">
+  <mat-card-header>
+    <mat-card-title>植物栽培區</mat-card-title>
+    <mat-card-subtitle>
+      植物種植區是綠屋頂最重要的角色。由於全球暖化及氣候異常變遷，加上全世界人口又過半集中於都市，都市熱島效應極為嚴重，世界各國無不積極推動都市環境中的各種節能降溫環保措施建起了高樓大廈，限制了綠地的發展，因此「屋頂綠化」概念便應運而生。
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/plant.png">
+  </mat-card-content>
+</mat-card>
+<mat-card [routerLink]="['太陽能發電區']">
+  <mat-card-header>
+    <mat-card-title>太陽能發電區</mat-card-title>
+    <mat-card-subtitle>把陽光轉換成電能，可直接使用太陽能光伏，或間接使用聚光太陽能熱發電聚光太陽能熱發電系統會使用透鏡或反射鏡和跟蹤系統將大面積的陽光聚焦成一個小束，並利用光電效應將光伏光轉換成電流。
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/sun-power.png">
+  </mat-card-content>
+</mat-card>
+<mat-card [routerLink]="['風力發電區']">
+  <mat-card-header>
+    <mat-card-title>風力發電區</mat-card-title>
+    <mat-card-subtitle>我們的風力發電，和一般在海邊看到的大型風力發電使用的「水平軸」不一樣，是採用「垂直軸」，不會受到方向的影響，可以24小時不間斷的發電。</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/wind-power.png">
+  </mat-card-content>
+</mat-card>
+<mat-card [routerLink]="['水耕區']">
+  <mat-card-header>
+    <mat-card-title>水耕區</mat-card-title>
+    <mat-card-subtitle>是一種不使用土壤種植植物的技術，只透過水攜帶供給植物生長所需的營養成分，或是使用支撐植物根部的材質，例如：珍珠岩、礫石、木質纖維、砂粒、泡棉。由於不須用土壤，故又稱無土栽培水耕。
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/wind-power.png">
+  </mat-card-content>
+</mat-card>
+<mat-card [routerLink]="['水撲滿區']">
+  <mat-card-header>
+    <mat-card-title>水撲滿區</mat-card-title>
+    <mat-card-subtitle>
+      利用雨水儲集的原理，透過集水區(如屋頂或地面)收集水量，再經由屋頂的排水管或設施間的接水管等導管系統，到收集雨水的建議處理系統，以處理較汙濁的雨水。接著再流經由濾網石英砂、活性碳等組成的簡易過濾設施，過濾掉懸浮物質，最後才流進儲水設施中暫存。
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/water.png">
+  </mat-card-content>
+</mat-card>
+<mat-card [routerLink]="['水撲滿區']">
+  <mat-card-header>
+    <mat-card-title>昆蟲的家</mat-card-title>
+    <mat-card-subtitle>
+      最早期的概念是英國的「野蜜蜂箱」，是用來研究生態的，「野蜜蜂箱」對於野蜂的保護很有幫助，如果生態保護得好，「昆蟲的家」裡面就會有很多不同種類的昆蟲來住，大家可以看到「昆蟲的家」裡面有瓢蟲、蜜蜂、蚱蜢、金龜子、蚜蟲，是一個和樂融融的昆蟲大家庭。
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="assets/images/insect.png">
+  </mat-card-content>
+</mat-card>
+
+<app-nav-fab-menu></app-nav-fab-menu>
+<app-nav-back (click)="onGoBack()"></app-nav-back>
